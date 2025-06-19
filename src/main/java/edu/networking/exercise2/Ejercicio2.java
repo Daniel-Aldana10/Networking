@@ -1,10 +1,7 @@
-package edu.networking;
+package edu.networking.exercise2;
 
 
 import org.springframework.web.bind.annotation.*;
-import java.io.*;
-import java.net.*;
-import java.nio.file.*;
 
 @RestController
 public class Ejercicio2{

@@ -1,4 +1,4 @@
-package edu.networking;
+package edu.networking.exercise2;
 
 
 import org.springframework.boot.SpringApplication;

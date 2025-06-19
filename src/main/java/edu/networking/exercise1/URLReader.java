@@ -1,5 +1,4 @@
-package edu.networking;
-import java.io.*;
+package edu.networking.exercise1;
 import java.net.*;
 public class URLReader {
 
