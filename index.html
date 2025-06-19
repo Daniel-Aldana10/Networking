@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form con TCP (vía HTTP)</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Buscar una pagina</h1>
+<form onsubmit="sendName(); return false;">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" name="name" value="Juan">
+  <input type="submit" value="Enviar">
+</form>
+
+<div id="responseDiv"></div>
+
+<script>
+  function sendName() {
+    const name = document.getElementById("name").value;
+
+    fetch("http://localhost:8080", {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain"
+      },
+      body: name
+    })
+    .then(response => response.text())
+    .then(text => {
+      document.getElementById("responseDiv").innerText = "Respuesta: " + text;
+    })
+    .catch(err => console.error("Error al enviar:", err));
+  }
+</script>
+
+</body>
+</html>
